@@ -1,0 +1,81 @@
+﻿<div ng-controller="bartenderController">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Enter Product Type (Valid entries: 1-Milk, 2-Orange)
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <input type="text" 
+                               name="ProductIndex"
+                               class="form-control" 
+                               placeholder="Enter Product Index" 
+                               maxlength="2"
+                               numbers-only 
+                               ng-model="ProductTypeId"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    You have selected a product
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <div class="badge">
+                            <h5 class="MyBullet" name="ProductName" ng-if="IsValidInput">{{ProductName}}</h5>
+                            <h5 class="MyBullet" name="InvalidProduct" ng-if="!IsValidInput">INVALID PROD TP</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Bartender Joe
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-12">
+                        <div class="badge" ng-if="!IsMixed">
+                            <h5 class="MyBullet" name="ReadyToMix" ng-if="IsValidInput">READY TO MIX</h5>
+                            <h5 class="MyBullet" name="CannotMix" ng-if="!IsValidInput">CANNOT MIX IT</h5>
+                        </div>
+                        <div class="badge" ng-if="IsMixed">
+                            <h5 name="Output" class="MyBullet">{{Mixture}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <input type="button" class="btn btn-primary" name="btnOutput"
+                           value="Mix Drink" 
+                           ng-click="Mix()"
+                           ng-disabled="!IsValidInput" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <textarea style="min-width:100%"
+                      class="form-control" 
+                      rows="6"
+                      fascet-tracer2>
+            </textarea>
+        </div>
+    </div>
+</div>
