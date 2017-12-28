@@ -6,6 +6,6 @@ displays the selected product
 and allows the user to mix the product in the drink.
 After mixing the product in the drink i.e. on click of mix button it shows the prepared drink name.
 
-e.g. If we enter 1, The product name "Milk" will be displated
+e.g. If we enter 1, The product name "Milk" will be displayed
 then on click of Mix button 
 it will prepare "Milk Shake"
