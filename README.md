@@ -1,4 +1,5 @@
 # Bartender App - AngularJs Showcase
+# Created by Nitin Sawant
 ASP.NET MVC based 'Bartender App' for showcasing AngularJs skill
 
 The app allows the bartender to select the product using "Id"
